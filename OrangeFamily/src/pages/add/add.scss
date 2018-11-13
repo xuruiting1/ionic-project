@@ -1,0 +1,25 @@
+page-add {
+    ion-content{
+        background-color: #ffdb2c !important;
+        ion-grid{
+            // border: 1px solid hotpink;
+            line-height: 150px;
+            margin-top: 120px;
+        }
+       
+        ion-col{
+            button{
+                background-color: transparent;
+            }
+            img{
+                width: 50%;
+                height: 100%;
+            }
+
+            
+        }
+    }
+    ion-footer{
+        text-align: center;
+    }
+}

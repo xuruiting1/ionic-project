@@ -1,0 +1,173 @@
+<ion-header text-center no-border>
+  <ion-navbar color="yel">
+      <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>
+      <img src="assets/imgs/桔家2.png"/>
+    </ion-title>
+    <!-- <button end> -->
+    <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-buttons>
+    <!-- </button> -->
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <div>
+      <ul class="navList">
+          <li *ngFor="let item of arr;let idx=index" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>
+          <!-- <li [class.first]="isActive==0" (click)="isClick(0)">推荐</li> -->
+          <!-- <li [ngClass]="{cssClass: expression}">家居</li> -->
+          <!-- <li [class.first]="isActive==1" (click)="isClick(1)">家居</li>
+          <li [class.first]="isActive==2" (click)="isClick(2)">餐厨</li>
+          <li [class.first]="isActive==3" (click)="isClick(3)">床上用品</li> -->
+      </ul>
+      <div [ngSwitch]="isActive">
+        <div *ngSwitchCase="0">
+          <!-- 轮播 -->
+          <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+              <ion-slide>
+                <img src="assets/imgs/slide1.png" alt="">
+              </ion-slide>
+              <ion-slide>
+                <img src="assets/imgs/slide1.png" alt="">
+              </ion-slide>
+              <ion-slide>
+                <img src="assets/imgs/slide1.png" alt="">
+              </ion-slide>
+            </ion-slides>
+            <div class="subtitle">
+                <h3 text-center>热|门|推|荐</h3>
+                <p text-center>RECOMMENDATION</p>
+            </div>
+            <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+          <ul class="goods">
+              <li>
+                <img src="assets/imgs/首页推荐03.png" alt="">
+                <p>——北欧原木色置物架——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/首页推荐03.png" alt="">
+                <p>——简约黑禅木茶几——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/首页推荐03.png" alt="">
+                <p>——北欧白橡木书架——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/首页推荐03.png" alt="">
+                <p>——北欧风餐边柜——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/首页推荐03.png" alt="">
+                <p>——北欧原木色——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/首页推荐04.gif" alt="">
+                <p>——北欧原木色—— </p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              
+          </ul>
+        </div>
+        <div *ngSwitchCase="1">
+            <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+                <ion-slide>
+                  <img src="assets/imgs/家居-banner.png" alt="">
+                </ion-slide>
+                <ion-slide>
+                  <img src="assets/imgs/家居-banner.png" alt="">
+                </ion-slide>
+                <ion-slide>
+                  <img src="assets/imgs/家居-banner.png" alt="">
+                </ion-slide>
+            </ion-slides>
+            <!-- 第二部分 -->
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-4>
+                        <img  src="assets/imgs/家居01.png">
+                    </ion-col>
+                  <ion-col col-4>
+                      <img  src="assets/imgs/家居02.png">
+                  </ion-col>
+                  <ion-col col-4>
+                      <img  src="assets/imgs/家居03.png">
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+            <!-- 桔子家居 -->
+            <div class="subtitle">
+                <h3 text-center>桔|子|家|居</h3>
+                <h2 text-center class="xiamian">Orange household</h2>
+                <p text-center class="shangmian">Orange household</p>
+            </div>
+            <div>
+                <ul class="goods">
+                    <li>
+                      <img src="assets/imgs/家居04.png" alt="">
+                      <p>—欧式全实木花几—RMB 600</p>
+                      <span><ion-icon name="md-star-half"></ion-icon></span>
+                    </li>
+                    <li>
+                      <img src="assets/imgs/家居05.png" alt="">
+                      <p>—现代简约早餐桌—RMB 450</p>
+                      <span><ion-icon name="md-star-half"></ion-icon></span>
+                    </li>
+                    <li>
+                      <img src="assets/imgs/家居05.png" alt="">
+                      <p>—欧式全实木花几—RMB 600</p>
+                      <span><ion-icon name="md-star-half"></ion-icon></span>
+                    </li>
+                    <li>
+                      <img src="assets/imgs/家居04.png" alt="">
+                      <p>—欧式全实木花几—RMB 600</p>
+                      <span><ion-icon name="md-star-half"></ion-icon></span>
+                    </li>
+                   
+                    
+                </ul>
+            </div>
+        </div>
+        <div *ngSwitchCase="2">
+          餐厨
+        </div>
+        <div *ngSwitchCase="3">
+          床上用品
+        </div>
+        <div *ngSwitchDefault>
+          output5
+        </div>
+      </div>
+  </div>
+  
+  <!-- <ion-slides pager="true" loop="true" class="sli" autoplay="true">
+
+    <ion-slide style="background-color: green">
+      <img src="assets/imgs/首页推荐01.png"/>//
+    </ion-slide>
+  
+    <ion-slide style="background-color: blue">
+      <img src="assets/imgs/首页推荐01.png"/>
+    </ion-slide>
+  
+    <ion-slide style="background-color: red">
+      <img src="assets/imgs/首页推荐01.png"/>
+    </ion-slide>
+  
+  </ion-slides> -->
+  
+  <!-- 相对父元素绝对定位，就是下面的那个透明的区域，需要定位
+  用ragb设置颜色和透明度，字体的颜色才不会有变化 -->
+</ion-content>
