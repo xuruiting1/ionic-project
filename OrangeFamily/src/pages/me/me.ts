@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { SetPage } from '../set/set';
+import{ EntryPage } from '../entry/entry';
+import {OrderPage} from '../order/order';
 /**
  * Generated class for the MePage page.
  *
@@ -18,13 +20,17 @@ export class MePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  //登录页面
+  //注册页面
   goLogin(){
     this.navCtrl.push(LoginPage);
   }
   //设置页面
   goSet(){
     this.navCtrl.push(SetPage);
+  }
+  //订单详情
+  goOrder(){
+    this.navCtrl.push(OrderPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MePage');

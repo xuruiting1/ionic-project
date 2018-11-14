@@ -18,7 +18,7 @@ export class AddPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   close(){
-    this,this.navCtrl.pop();
+    this.navCtrl.pop();
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddPage');

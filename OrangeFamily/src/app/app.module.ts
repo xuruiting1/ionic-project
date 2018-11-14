@@ -15,6 +15,12 @@ import { PlusPage } from '../pages/plus/plus';
 import { AddPage } from '../pages/add/add';
 import { LoginPage } from '../pages/login/login';
 import { SetPage } from '../pages/set/set';
+import { EntryPage } from '../pages/entry/entry';
+import { GosearchPage } from '../pages/gosearch/gosearch';
+import { DetailsPage } from '../pages/details/details';
+import { OrderPage } from '../pages/order/order';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -26,12 +32,19 @@ import { SetPage } from '../pages/set/set';
     PlusPage,
     AddPage,
     LoginPage,
-    SetPage
+    SetPage,
+    EntryPage,
+    GosearchPage,
+    DetailsPage,
+    OrderPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '',
+      tabsHideOnSubPages:true
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +57,11 @@ import { SetPage } from '../pages/set/set';
     PlusPage,
     AddPage,
     LoginPage,
-    SetPage
+    SetPage,
+    EntryPage,
+    GosearchPage,
+    DetailsPage,
+    OrderPage
   ],
   providers: [
     StatusBar,

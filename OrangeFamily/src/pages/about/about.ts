@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import{ GosearchPage} from '../gosearch/gosearch';
 
 @Component({
   selector: 'page-about',
@@ -12,6 +13,9 @@ export class AboutPage {
   isActive=0;
   isClick(i){
     this.isActive=i;
+  }
+  goSearch(){
+    this.navCtrl.push(GosearchPage);
   }
   constructor(public navCtrl: NavController) {
 

@@ -8,8 +8,7 @@ page-me {
             display: block;
             width: 55px;
             height: 55px;
-            margin: 0px auto; 
-                  
+            margin: 0px auto;     
         }
         #head{
             height: 200px;
@@ -18,6 +17,7 @@ page-me {
             background-size: 100%;
             position: relative;
             top:-15px;
+            // margin: 0px auto;
         }
         #head .headimg{
             width: 100px;
@@ -27,6 +27,7 @@ page-me {
             position: absolute;
             top: 50px;
             left: 36%;
+            // margin: 0px auto;
         }
         .headname{
             text-align: center;
