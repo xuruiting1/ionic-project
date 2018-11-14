@@ -1,0 +1,79 @@
+<ion-content>
+  <div id="head" (click)="goLogin()">
+    <!-- <a></a> -->
+    <img src="../../assets/imgs/me-head.jpg" alt="" class="headimg"/>
+    <p class="headname">土方桔桔桔</p>
+  </div>
+  <div class="order" (click)="goOrder()">
+    <span class="s1">我的订单</span>
+    <span class="s2">查看全部订单 ></span>
+  </div>
+ <!-- 第一行 -->
+  <ion-grid>
+    <ion-row class="first">
+      <ion-col col-4>
+        <button>
+          <img src="../../assets/imgs/me01.png">
+          <p>我的发布</p>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button>
+          <img src="../../assets/imgs/me02.png">
+          <p>我的收藏</p>
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button >
+          <img src="../../assets/imgs/me03.png">
+          <p>我的关注</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- 第二行 -->
+  <ion-grid>
+    <ion-row class="second">
+      <ion-col col-6 >
+        <button >
+          <img src="../../assets/imgs/me04.png">
+          <p>购物车</p>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button>
+          <img src="../../assets/imgs/me05.png">
+          <p>收货地址</p>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="second">
+      <ion-col col-6>
+        <button >
+          <img src="../../assets/imgs/me06.png">
+          <p>优惠券</p>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button>
+          <img src="../../assets/imgs/me07.png">
+          <p>在线客服</p>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="second">
+      <ion-col col-6>
+        <button>
+          <img src="../../assets/imgs/me08.png">
+          <p>我的消息</p>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button (click)="goSet()">
+          <img src="../../assets/imgs/me08.png">
+          <p>设置</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

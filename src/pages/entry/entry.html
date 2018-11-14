@@ -1,0 +1,37 @@
+<!-- <ion-header no-border >
+    <ion-navbar color="trans">
+    </ion-navbar>
+  </ion-header> -->
+
+<ion-content padding>
+  <div class="logo">
+    <img src="../assets/imgs/entry-logo.png"/>
+  </div>
+  <ul>
+    <li><ion-icon name="person"></ion-icon><span>手机号/邮箱</span></li>
+    <li><ion-icon name="unlock"></ion-icon><span>密码</span></li>
+  </ul>
+  <button ion-button block color="yel" (click)="goHome()">登录</button>
+  <div class="choice">
+      <ion-grid>
+          <ion-row>
+              <ion-col col-4>
+                      <!-- <ion-icon name="chatbubbles"></ion-icon> -->
+                    <img  src="assets/imgs/entry04.png">
+                  
+              </ion-col>
+              <ion-col col-4>
+                    <img  src="assets/imgs/entry03.png">
+              </ion-col>
+              <ion-col col-4>
+                    <img  src="assets/imgs/entry02.png">
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+  </div>
+  <ion-footer>
+      <span (click)="goLogin()">没有账号账号？立即注册</span>
+      <span class="right">忘记密码？</span>
+  </ion-footer>
+  
+</ion-content>

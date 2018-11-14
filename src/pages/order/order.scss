@@ -1,0 +1,15 @@
+page-order {
+    ion-content{
+        .left{
+            margin-bottom: 10px;
+            img{
+                width:130px;
+                height: 160px;
+            }
+        }
+        .right{
+            margin-top: -10px;
+            float: right;
+        }
+    }
+}

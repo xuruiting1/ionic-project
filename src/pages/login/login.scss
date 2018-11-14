@@ -1,0 +1,30 @@
+page-login {
+    ion-header{
+        ion-navbar{
+            font-size: 30px;
+            line-height: 50px;
+        }
+    }
+    ion-content{
+        background-image: url(../assets/imgs/bg.png);
+        background-size:cover;
+    }
+    .box{
+        ion-item{
+            background:transparent;
+            line-height: 50px;
+        }
+        button{
+            margin-top: 50px;
+            color: white;
+        }
+        p{
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+          
+    }
+    
+    
+}

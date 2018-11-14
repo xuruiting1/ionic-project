@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar (click)="goSearch()">
+    <ion-searchbar placeholder="双十一特惠好物超低价" ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="div1">
+      <img src="../assets/imgs/store-banner.png"/>
+    </div>
+    <ul class="navList">
+        <li *ngFor="let item of arr;let idx=index" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>
+    </ul>
+    <div [ngSwitch]="isActive">
+        <div *ngSwitchCase="0">
+           <div class="des">
+             <p>————沙发————</p>
+           </div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <img  src="assets/imgs/store01.png">
+                    </ion-col>
+                  <ion-col col-6>
+                      <img  src="assets/imgs/store02.png">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                        <img  src="assets/imgs/store03.png">
+                    </ion-col>
+                  <ion-col col-6>
+                      <img  src="assets/imgs/store04.png">
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+            <div class="des">
+                <p>————电视柜————</p>
+              </div>
+        </div>
+        <div *ngSwitchCase="1">
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-4>
+                        <img  src="assets/imgs/家居01.png">
+                    </ion-col>
+                  <ion-col col-4>
+                      <img  src="assets/imgs/家居02.png">
+                  </ion-col>
+                  <ion-col col-4>
+                      <img  src="assets/imgs/家居03.png">
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+            <!-- 桔子家居 -->
+        </div>
+        <div *ngSwitchCase="2">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-6>
+                      <img  src="assets/imgs/store01.png">
+                  </ion-col>
+                <ion-col col-6>
+                    <img  src="assets/imgs/store02.png">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-6>
+                      <img  src="assets/imgs/store03.png">
+                  </ion-col>
+                <ion-col col-6>
+                    <img  src="assets/imgs/store04.png">
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+        <div *ngSwitchCase="3">
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-4>
+                        <img  src="assets/imgs/家居01.png">
+                    </ion-col>
+                  <ion-col col-4>
+                      <img  src="assets/imgs/家居02.png">
+                  </ion-col>
+                  <ion-col col-4>
+                      <img  src="assets/imgs/家居03.png">
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div *ngSwitchCase="4">
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-6>
+                        <img  src="assets/imgs/store01.png">
+                    </ion-col>
+                  <ion-col col-6>
+                      <img  src="assets/imgs/store02.png">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                        <img  src="assets/imgs/store03.png">
+                    </ion-col>
+                  <ion-col col-6>
+                      <img  src="assets/imgs/store04.png">
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div *ngSwitchDefault>
+          出错了
+        </div>
+      </div>
+</ion-content>
